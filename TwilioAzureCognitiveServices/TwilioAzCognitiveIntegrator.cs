@@ -34,7 +34,7 @@ namespace TwilioAzureCognitiveServices
             queryString["staging"] = "false";
             queryString["timezoneOffset"] = "0";
 
-            var endpointUri = String.Format("https://{0}/luis/prediction/v3.0/apps/{1}/slots/production/predict?query={2}", LuisUrlBase, LuisAppId, queryString);
+            var endpointUri = String.Format("https://{0}/luis/prediction/v3.0/apps/{1}/slots/production/predict?{2}", LuisUrlBase, LuisAppId, queryString);
 
             var response = client.GetAsync(endpointUri).Result;
 
