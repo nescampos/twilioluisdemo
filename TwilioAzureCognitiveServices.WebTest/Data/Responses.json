@@ -1,0 +1,18 @@
+{
+  "responses": [
+    {
+      "intent": "Greeting",
+      "NormalFeelingResponse": [ "Hello, I am your virtual assistant", "how are you?" ]
+    }
+    ,
+    {
+      "intent": "None",
+      "NormalFeelingResponse": [ "I don't understand your question" ],
+      "NegativeFeelingResponse": [ "I don't understand your question", "I am a bot, but I have feelings." ]
+    },
+    {
+      "intent": "WhoAreYou",
+      "NormalFeelingResponse": [ "I am a chatbot", "I am trained for helping you." ]
+    }
+  ]
+}
