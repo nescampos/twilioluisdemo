@@ -34,7 +34,7 @@ namespace TwilioAzureCognitiveServices
             queryString["staging"] = "false";
             queryString["timezoneOffset"] = "0";
 
-            var endpointUri = String.Format("https://{0}/luis/prediction/v3.0/apps/{1}/slots/production/predict?{2}", LuisUrlBase, LuisAppId, queryString);
+            var endpointUri = String.Format("https://{0}/luis/prediction/v3.0/apps/{1}/slots/production/predict?verbose=true&show-all-intents=false&log=true&query={2}", LuisUrlBase, LuisAppId, message);
 
             var response = client.GetAsync(endpointUri).Result;
 
@@ -69,7 +69,7 @@ namespace TwilioAzureCognitiveServices
             }
             else
             {
-                messagingResponse.Message("Sorry, I had an internal error. I will fix it soon.");
+                messagingResponse.Message("Sorry, I had an internal error. I will fix it soon: "+ endpointUri);
             }
             return messagingResponse;
         }
